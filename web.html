@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thi trắc nghiệm</title>
+    <link rel="stylesheet" href="stylesweb.css">
+</head>
+<body>
+    <!-- đăng nhập-->
+    <div class="login">
+            <h1>Đăng nhập</h1>
+
+            <form id="loginForm" onsubmit="return saveInputValue()">
+            <div class="question1">
+            <label for="name">Họ và tên</label>
+            <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="question1">
+            <label for="dob">Ngày sinh</label>
+            <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="question1">
+            <label for="studentId">Mã sinh viên</label>
+            <input type="text" id="studentId" name="studentId" required>
+            </div>
+
+            <div class="question1">
+            <label for="class">Lớp</label>
+            <input type="text" id="class" name="class" required>
+            </div>
+
+            <button type="dangnhap">Đăng nhập</button>
+            </form>
+    </div>
+
+    <!-- câu hỏi-->
+    <div id="quizContainer" class="quiz-container" style="display: none;">
+        <form onsubmit="return submitQuiz(event)">
+            <div id="questionContainer"></div>
+<!-- nút nộp bài-->
+            <button type="submit">Nộp bài</button>
+
+            
+        </form>
+    <div id="result"></div>  
+    
+    </div>
+
+    <script src="scp.js"></script>
+</body>
+</html>
